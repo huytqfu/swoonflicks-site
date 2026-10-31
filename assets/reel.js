@@ -178,7 +178,7 @@
     }
     [].forEach.call(D.querySelectorAll('.cont'), function (x) { x.hidden = true });
     var box = at.querySelector('.cont');
-    box.textContent = (ep ? 'Continue Episode ' + ep : 'Continue watching') + ' on ' + B.app;
+    box.textContent = (ep ? 'Continue Episode ' + ep : 'Continue watching') + ' in the app';
     box.hidden = false;
     if (jump) go(at, true);
   }
