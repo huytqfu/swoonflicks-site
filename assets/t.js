@@ -19,12 +19,22 @@
     try { put(SS, 'sf_ref', new URL(D.referrer).hostname) } catch (e) {}
   }
   if (!get(SS, 'sf_landing')) put(SS, 'sf_landing', location.pathname);
-  // Phiên đến từ Google Ads (gclid / wbraid / gbraid của iOS, hoặc utm_source=google + utm_medium=cpc): giữ cờ cả phiên để mọi trang dùng link DramaCPS riêng cho ads
-  if (q.get('gclid') || q.get('wbraid') || q.get('gbraid') || (q.get('utm_source') === 'google' && q.get('utm_medium') === 'cpc')) put(SS, 'sf_paid', '1');
-  var PAID = get(SS, 'sf_paid') === '1';
+  // Nền ads của phiên (google / tiktok / meta, còn lại organic), chỉ đọc từ URL trang này, giữ cả phiên để mọi trang dùng link CPS riêng nền đó.
+  // Google: gclid / wbraid / gbraid (iOS) hoặc utm_source=google. TikTok: ttclid hoặc utm_source=tiktok. Meta: utm_source facebook|fb|meta|ig|instagram.
+  // Không dùng fbclid: Facebook/IG gắn cả cho link organic. utm_medium bio/organic/social/referral/email = organic dù utm_source là nền nào.
+  function srcOf() {
+    var s = (q.get('utm_source') || '').toLowerCase(), m = (q.get('utm_medium') || '').toLowerCase();
+    if (q.get('gclid') || q.get('wbraid') || q.get('gbraid')) return 'google';
+    if (q.get('ttclid')) return 'tiktok';
+    if (/^(bio|organic|social|referral|email)$/.test(m)) return '';
+    return s === 'google' ? 'google' : s === 'tiktok' ? 'tiktok' : /^(facebook|fb|meta|ig|instagram)$/.test(s) ? 'meta' : '';
+  }
+  if (srcOf()) put(SS, 'sf_src', srcOf()); // lượt bấm ads sau ghi đè lượt organic trước trong cùng phiên
+  var SRC = get(SS, 'sf_src') || 'organic';
   function attr() {
     var o = {};
     KEYS.concat(['ref', 'landing']).forEach(function (k) { var v = get(SS, 'sf_' + k); if (v) o[k] = v });
+    o.src = SRC;
     return o;
   }
   function uid() { return W.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now() + '-' + Math.random().toString(36).slice(2) }
@@ -151,10 +161,11 @@
 
   // 4. Gắn tự động: trang phim -> ViewContent; link có data-aff -> ClickAffiliate (link CPS giữ nguyên, không cloak)
   function film() { var b = D.body.dataset; return b.film ? { film: b.film, title: b.title, app: b.app } : {} }
-  // Đổi nút ra app sang link ads (chỉ phim có data-ads-href do build bơm từ config "ads_links"); không có thì giữ link organic
+  // Đổi nút ra app sang link riêng của nền (data-l-google / data-l-tiktok / data-l-meta do build bơm từ config "src_links"); nền không có link riêng thì giữ link organic
+  var KEY = 'l' + SRC.charAt(0).toUpperCase() + SRC.slice(1); // data-l-tiktok -> dataset.lTiktok
+  function own(a) { return SRC !== 'organic' && a.dataset[KEY] }
   function swapAds() {
-    if (!PAID) return;
-    [].forEach.call(D.querySelectorAll('a[data-ads-href]'), function (a) { a.href = a.dataset.adsHref });
+    [].forEach.call(D.querySelectorAll('a[data-aff]'), function (a) { if (own(a)) a.href = own(a) });
   }
   function boot() {
     swapAds();
@@ -165,7 +176,7 @@
       if (!a) return;
       track('ClickAffiliate', Object.assign(film(), { film: a.dataset.film || film().film, title: a.dataset.title || film().title,
         app: a.dataset.app || film().app, placement: a.dataset.aff, link_url: a.href,
-        link_kind: a.dataset.adsHref && a.href === a.dataset.adsHref ? 'ads' : 'organic',
+        link_kind: own(a) && a.href === own(a) ? 'ads' : 'organic', // ads = link riêng nền; nền nào thì xem src
         episode: a.dataset.ep ? +a.dataset.ep : undefined }));
     }, true);
   }
