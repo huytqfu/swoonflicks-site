@@ -122,6 +122,9 @@
       // tên chuẩn TikTok: click link CPS = ClickButton (TikTok để tới 2027), gửi form mã mời = Lead (tên mới của SubmitForm từ 05/2025; pixel và API cùng tên để khử trùng)
       var tn = TT[name] || name, tp = Object.assign({ contents: item, content_type: 'product' }, p);
       ttq.track(tn, tp, { event_id: id });
+      // Tệp last hit TikTok: API/Audience chỉ dựng tệp web từ event chuẩn, không nhận custom ReachedLastFree.
+      // Bắn thêm Contact (content_type last_free) để dựng tệp. Không dùng Contact làm event tối ưu camp.
+      if (name === 'ReachedLastFree') ttq.track('Contact', Object.assign({}, tp, { content_type: 'last_free' }), { event_id: id + '-lf' });
       // Events API: bản sao cùng event + event_id gửi Worker để TikTok khử trùng (help: ads.tiktok.com/help/article/event-deduplication).
       // sendBeacon text/plain: không preflight, sống qua cú chuyển trang, không chặn click.
       if (C.ttapi && TT[name]) {
