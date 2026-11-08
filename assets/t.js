@@ -12,6 +12,15 @@
 
   // 1. Nguồn: giữ utm + click id lần chạm đầu trong phiên, gắn vào mọi sự kiện
   var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'ttclid', 'gclid', 'wbraid', 'gbraid'];
+  // Nguồn giữ thêm 7 ngày ở localStorage (sf_touch): mở lại trang không có utm (in-app browser TikTok/IG đóng rồi mở) vẫn ra đúng nền.
+  // Chỉ khôi phục khi URL không có utm/click id, phiên còn trống và không phải trang bio; lượt chạm mới có utm ghi đè (last-touch).
+  var TOUCH = 'sf_touch', TTL = 7 * 864e5, HAS = KEYS.some(function (k) { return q.get(k) });
+  if (!HAS && !C.src && !get(SS, 'sf_utm_source') && !get(SS, 'sf_src')) {
+    try {
+      var t = JSON.parse(get(LS, TOUCH) || 'null');
+      if (t && t.v && Date.now() - t.t < TTL) Object.keys(t.v).forEach(function (k) { if (/^sf_/.test(k)) put(SS, k, String(t.v[k]).slice(0, 200)) });
+    } catch (e) {}
+  }
   KEYS.forEach(function (k) { var v = q.get(k); if (v && !get(SS, 'sf_' + k)) put(SS, 'sf_' + k, v.slice(0, 200)) });
   if (q.get('fbclid') && !get(SS, 'sf_fbclid_ts')) put(SS, 'sf_fbclid_ts', String(Date.now())); // mốc lần chạm cho fbc, giữ cố định cả phiên
   if (!get(SS, 'sf_utm_source') && C.src) { put(SS, 'sf_utm_source', C.src); put(SS, 'sf_utm_medium', 'bio') }
@@ -31,6 +40,11 @@
   }
   if (srcOf()) put(SS, 'sf_src', srcOf()); // lượt bấm ads sau ghi đè lượt organic trước trong cùng phiên
   var SRC = get(SS, 'sf_src') || 'organic';
+  if (HAS) { // lượt chạm này có utm/click id: lưu bản phiên sang localStorage kèm mốc giờ
+    var tv = {};
+    KEYS.concat(['fbclid_ts', 'src']).forEach(function (k) { var v = get(SS, 'sf_' + k); if (v) tv['sf_' + k] = v });
+    try { LS && LS.setItem(TOUCH, JSON.stringify({ t: Date.now(), v: tv })) } catch (e) {}
+  }
   function attr() {
     var o = {};
     KEYS.concat(['ref', 'landing']).forEach(function (k) { var v = get(SS, 'sf_' + k); if (v) o[k] = v });
