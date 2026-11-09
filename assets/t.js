@@ -14,11 +14,11 @@
   var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'ttclid', 'gclid', 'wbraid', 'gbraid'];
   // Nguồn giữ thêm 7 ngày ở localStorage (sf_touch): mở lại trang không có utm (in-app browser TikTok/IG đóng rồi mở) vẫn ra đúng nền.
   // Chỉ khôi phục khi URL không có utm/click id, phiên còn trống và không phải trang bio; lượt chạm mới có utm ghi đè (last-touch).
-  var TOUCH = 'sf_touch', TTL = 7 * 864e5, HAS = KEYS.some(function (k) { return q.get(k) });
+  var TOUCH = 'sf_touch', TTL = 7 * 864e5, HAS = KEYS.some(function (k) { return q.get(k) }), RESTORED = false, gaT = 0; // gaT: lần cuối gửi hit GA4
   if (!HAS && !C.src && !get(SS, 'sf_utm_source') && !get(SS, 'sf_src')) {
     try {
       var t = JSON.parse(get(LS, TOUCH) || 'null');
-      if (t && t.v && Date.now() - t.t < TTL) Object.keys(t.v).forEach(function (k) { if (/^sf_/.test(k)) put(SS, k, String(t.v[k]).slice(0, 200)) });
+      if (t && t.v && Date.now() - t.t < TTL) { RESTORED = true; Object.keys(t.v).forEach(function (k) { if (/^sf_/.test(k)) put(SS, k, String(t.v[k]).slice(0, 200)) }) }
     } catch (e) {}
   }
   KEYS.forEach(function (k) { var v = q.get(k); if (v && !get(SS, 'sf_' + k)) put(SS, 'sf_' + k, v.slice(0, 200)) });
@@ -83,7 +83,8 @@
       gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
       var u = new URL(location.href); u.searchParams.delete('fbclid'); u.searchParams.delete('ttclid');
       gtag('js', new Date());
-      if (C.ga4) gtag('config', C.ga4, { transport_type: 'beacon', page_location: u.href });
+      // phiên khôi phục từ sf_touch: page_view mang lại utm đã lưu, để GA4 gán nguồn phiên đúng nền thay vì direct
+      if (C.ga4) { gtag('config', C.ga4, { transport_type: 'beacon', page_location: RESTORED ? gaLoc() : u.href }); gaT = Date.now() }
       // một gtag.js dùng chung GA4 + Google Ads; config AW để thẻ Ads tự đọc gclid / đặt cookie _gcl_aw
       if (GADS) gtag('config', C.gads, { page_location: u.href });
       script('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(C.ga4 || C.gads));
@@ -114,12 +115,24 @@
   var TT = { ViewContent: 'ViewContent', ClickAffiliate: 'ClickButton', RequestInvite: 'Lead' }; // chỉ 3 sự kiện này đi Events API
   var FB = { ViewContent: 'ViewContent', ClickAffiliate: 'ClickAffiliate', RequestInvite: 'Lead' }; // 3 sự kiện đi Conversions API; chỉ ClickAffiliate là custom
   var GA = { ViewContent: 'view_item', ClickAffiliate: 'click_affiliate', RequestInvite: 'generate_lead', VideoPlay: 'video_start', VideoProgress: 'video_progress', Filter: 'filter_select' };
+  // GA4 hết phiên sau 30 phút không có hit (player iframe RS Boost không bắn event; quay lại tab cũ sau khi ra app).
+  // Event đầu của phiên mới không phải page_view thì GA4 ghi nguồn phiên "(not set)": bắn page_view kèm utm đã lưu trước.
+  var GA_IDLE = 29 * 60e3;
+  function gaLoc() {
+    var u = new URL(location.href); u.searchParams.delete('fbclid'); u.searchParams.delete('ttclid');
+    if (!u.searchParams.get('utm_source') && !u.searchParams.get('gclid'))
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'wbraid', 'gbraid'].forEach(function (k) { var v = get(SS, 'sf_' + k); if (v) u.searchParams.set(k, v) });
+    return u.href;
+  }
   function send(name, p0, id) {
     // click id không gửi thành tham số (pixel Meta/TikTok tự đọc từ URL), tránh nổ cardinality GA4
     var p = Object.assign({}, p0); delete p.fbclid; delete p.ttclid; delete p.gclid; delete p.wbraid; delete p.gbraid;
     var ads = name !== 'Filter'; // lọc kệ chỉ đếm ở GA4, không đổ rác vào tệp quảng cáo
     var item = p.film ? [{ content_id: p.film, content_name: p.title, content_type: 'product', content_category: p.app }] : [];
-    if (W.gtag && C.ga4) gtag('event', GA[name] || name, Object.assign({ event_id: id }, p));
+    if (W.gtag && C.ga4) {
+      if (gaT && Date.now() - gaT > GA_IDLE) gtag('event', 'page_view', { page_location: gaLoc(), page_title: D.title });
+      gtag('event', GA[name] || name, Object.assign({ event_id: id }, p)); gaT = Date.now();
+    }
     // Google Ads: bấm link CPS = conversion. transport beacon, không event_callback: không giữ click lại, khách nhảy app ngay.
     // transaction_id = event_id để Google khử trùng nếu bắn lặp (support.google.com/google-ads/answer/6386790)
     if (W.gtag && GADS && name === 'ClickAffiliate') gtag('event', 'conversion', { send_to: GADS, transaction_id: id, transport_type: 'beacon' });
