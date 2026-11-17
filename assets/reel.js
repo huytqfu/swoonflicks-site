@@ -166,6 +166,15 @@
     var a = e.target.closest && e.target.closest('a[data-aff]');
     if (a && a.dataset.film === B.film) remember(a.dataset.ep);
   }, true);
+  // nút "Copy code & open app" (a.cpy, chỉ có ở phim có promo_code): chép mã rồi mới mở link. t.js đã bắn ClickAffiliate placement=code, listener trên đã remember().
+  D.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a.cpy[data-code]');
+    if (!a) return;
+    e.preventDefault();
+    var c = a.dataset.code, go = function () { a.textContent = 'Code copied ✓'; setTimeout(function () { location.href = a.href }, 350) };
+    function old() { try { var t = D.createElement('textarea'); t.value = c; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; D.body.appendChild(t); t.select(); D.execCommand('copy'); t.remove() } catch (x) {} go() }
+    try { navigator.clipboard.writeText(c).then(go, old) } catch (x) { old() }
+  });
   function back(jump) {
     var c; try { c = JSON.parse(localStorage.getItem(KEY) || 'null') } catch (e) {}
     if (!c || c.film !== B.film || Date.now() - c.t > 7 * 864e5 || !gate) return;
