@@ -70,14 +70,14 @@
   var EU = !tz || /^Etc\//.test(tz) || /^Europe\//.test(tz) || /^Atlantic\/(Reykjavik|Canary|Madeira|Azores|Faroe)/.test(tz) ||
     /^(Asia\/(Nicosia|Famagusta)|Africa\/Ceuta|Arctic\/Longyearbyen|Indian\/(Reunion|Mayotte)|America\/(Martinique|Guadeloupe|Cayenne|Marigot|St_Barthelemy))$/.test(tz);
   var GADS = C.gads && C.gads_label ? C.gads + '/' + C.gads_label : ''; // send_to của conversion action Google Ads (AW-xxx/label)
-  var ANY = !!(C.ga4 || C.meta || C.tiktok || GADS);
+  var ANY = !!(C.ga4 || C.meta || C.tiktok || C.gads); // AW không label vẫn chạy: chỉ remarketing, conversion lấy từ GA4 import
   var consent = EU ? get(LS, 'sf_consent') : 'yes', loaded = false, queue = [];
 
   function script(src) { var s = D.createElement('script'); s.async = true; s.src = src; D.head.appendChild(s) }
   function load() {
     if (loaded) return; loaded = true;
     XID = sfid();
-    if (C.ga4 || GADS) {
+    if (C.ga4 || C.gads) {
       W.dataLayer = W.dataLayer || []; W.gtag = function () { dataLayer.push(arguments) };
       // load() chỉ chạy sau khi đồng ý hoặc ngoài EU, nên mặc định granted; tín hiệu v2 cần cho remarketing Google Ads ở EEA
       gtag('consent', 'default', { ad_storage: 'granted', analytics_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
@@ -86,7 +86,7 @@
       // phiên khôi phục từ sf_touch: page_view mang lại utm đã lưu, để GA4 gán nguồn phiên đúng nền thay vì direct
       if (C.ga4) { gtag('config', C.ga4, { transport_type: 'beacon', page_location: RESTORED ? gaLoc() : u.href }); gaT = Date.now() }
       // một gtag.js dùng chung GA4 + Google Ads; config AW để thẻ Ads tự đọc gclid / đặt cookie _gcl_aw
-      if (GADS) gtag('config', C.gads, { page_location: u.href });
+      if (C.gads) gtag('config', C.gads, { page_location: u.href });
       script('https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(C.ga4 || C.gads));
     }
     if (C.meta) {
