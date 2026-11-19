@@ -207,7 +207,9 @@
       track('ClickAffiliate', Object.assign(film(), { film: a.dataset.film || film().film, title: a.dataset.title || film().title,
         app: a.dataset.app || film().app, placement: a.dataset.aff, link_url: a.href,
         link_kind: own(a) && a.href === own(a) ? 'ads' : 'organic', // ads = link riêng nền; nền nào thì xem src
-        episode: a.dataset.ep ? +a.dataset.ep : undefined }));
+        episode: a.dataset.ep ? +a.dataset.ep : undefined,
+        // dấu bấm tay (19/11, sau khi bỏ tự nhảy ở reel.js): GA4 method=manual, TikTok/Meta content_type=manual để dựng tệp loại trừ "đã bấm CPS" sạch
+        method: 'manual', content_type: 'manual' }));
     }, true);
   }
   D.readyState === 'loading' ? D.addEventListener('DOMContentLoaded', boot) : boot();
