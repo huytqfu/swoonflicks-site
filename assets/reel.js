@@ -1,11 +1,11 @@
 /* Player lướt dọc trang phim (build copy sang /assets/reel.js). Mỗi .sl là 1 màn; .fr = tập có video, .lk.st = tập free chưa có nguồn,
    .gate = màn khoá (tập trả phí đầu), .info = giới thiệu.
    - Vào màn tập free: lần đầu bấm play, sau đó lướt tới đâu tự phát tới đó; chỉ 1 video sống 1 lúc.
-   - Hết video tự lướt sang tập kế; đã bấm xem và lướt hết tập free rồi lướt tiếp tới màn trả phí đầu thì nhảy thẳng link app, không đếm ngược (sếp 14/10 02:28).
-     Chưa xem hết tập free (hoặc phim không có tập nào phát được) thì màn khoá chỉ đứng yên với nút, không tự nhảy (sếp 15/10).
-   - Ra link app (tự nhảy, nút, ô tập trong lưới) thì nhớ tập đó; khách quay lại site thì nhảy về màn khoá, hiện "Continue Episode N on <app>".
+   - Hết video tự lướt sang tập kế. Màn trả phí đầu (màn khoá) chỉ đứng yên với nút, KHÔNG tự nhảy link app (bỏ 19/11 cho test B:
+     tự nhảy bắn ClickButton khi khách chưa bấm, TikTok tối ưu sai người).
+   - Ra link app (nút, ô tập trong lưới) thì nhớ tập đó; khách quay lại site thì nhảy về màn khoá, hiện "Continue Episode N on <app>".
    - Nguồn: mp4 = tập gốc DramaCPS tự host R2 (<video>, đọc được tiến độ + hết video); yt = Shorts kênh mình (API, đọc được tiến độ + hết video); rs = iframe chính chủ RS Boost (không đọc được gì, khách tự lướt).
-   - Sự kiện qua SFT (t.js): VideoPlay, VideoProgress (chỉ mp4 + YouTube đọc được), ReachedLastFree (lướt tới tập free cuối, 1 lần/trang), WatchedAllFree (tập free cuối xem tới 95%, chỉ mp4 + YouTube), ClickAffiliate (t.js tự bắt a[data-aff]; tự nhảy bắn tay, placement auto). */
+   - Sự kiện qua SFT (t.js): VideoPlay, VideoProgress (chỉ mp4 + YouTube đọc được), ReachedLastFree (lướt tới tập free cuối, 1 lần/trang), WatchedAllFree (tập free cuối xem tới 95%, chỉ mp4 + YouTube), ClickAffiliate (chỉ khi khách tự bấm a[data-aff] hoặc nút Copy code, t.js tự bắt). */
 (function (W, D) {
   var B = D.body.dataset, feed = D.querySelector('.rl'), S = [].slice.call(D.querySelectorAll('.rl > .sl')), ct = D.querySelector('.rt .ct'),
     gate = D.querySelector('.sl.gate'), dlg = D.querySelector('.eps'), link = gate && gate.querySelector('.unl'),
@@ -136,7 +136,7 @@
     var n = s.dataset.ep;
     ct.textContent = n && s.classList.contains('fr') ? 'EP ' + n : '';  // không lộ tổng / số tập free (sếp 15/10)
     if (s === lastFr && gest && !done) { done = true; T('ReachedLastFree', { episode: +n }) }  // đã bấm xem và lướt tới tập free cuối (chưa chắc xem hết)
-    if (s !== gate) hold = false; else if (!hold && done && !D.querySelector('.sl.st')) jump();
+    if (s !== gate) hold = false;  // màn trả phí đầu chỉ đứng yên với nút, không tự nhảy link CPS (test B 19/11: ClickButton chỉ đếm bấm tay)
     if (s.classList.contains('fr') && gest) play(s);
   }
   if ('IntersectionObserver' in W) {
@@ -149,16 +149,6 @@
     S.forEach(function (s) { io.observe(s) });
   }
   S.forEach(function (s) { var b = s.querySelector('.play'); if (b) b.onclick = function () { act = s; play(s) } });
-
-  // hết tập free: chạm màn trả phí đầu là nhảy thẳng link CPS gốc (sếp 14/10 02:28: không đếm ngược, không chờ).
-  // Khách quay lại site thì đứng ở màn này với dòng "Continue Episode N on <app>" (hold), lướt ra rồi vào lại mới nhảy tiếp.
-  function jump() {
-    if (!link) return;
-    hold = true;
-    T('ClickAffiliate', { placement: 'auto', link_url: link.href, episode: +link.dataset.ep || undefined });
-    remember(link.dataset.ep);
-    setTimeout(function () { location.href = link.href }, 150);
-  }
 
   // ---- nhớ tập đã ra app, quay lại thì nói rõ đang xem tiếp ở app nào ----
   function remember(ep) { try { localStorage.setItem(KEY, JSON.stringify({ film: B.film, ep: ep || '', t: Date.now() })) } catch (e) {} }
