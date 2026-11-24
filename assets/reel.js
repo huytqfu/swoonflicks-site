@@ -10,7 +10,10 @@
   var B = D.body.dataset, feed = D.querySelector('.rl'), S = [].slice.call(D.querySelectorAll('.rl > .sl')), ct = D.querySelector('.rt .ct'),
     gate = D.querySelector('.sl.gate'), dlg = D.querySelector('.eps'), link = gate && gate.querySelector('.unl'),
     act = null, gest = false, hold = false, done = false, full = false, FR = D.querySelectorAll('.rl > .sl.fr'), lastFr = FR[FR.length - 1], P = null, cur = '', marks = {}, tick, KEY = 'sf_cont',
-    RM = W.matchMedia && matchMedia('(prefers-reduced-motion:reduce)').matches;
+    RM = W.matchMedia && matchMedia('(prefers-reduced-motion:reduce)').matches,
+    // chữ theo <html lang> (trang phim tiếng TBN cho test Mexico 24/11; mặc định en)
+    TX = ({ es: { ep: 'CAP', copied: 'Código copiado ✓', contEp: 'Sigue con el capítulo {n} en la app', cont: 'Sigue viendo en la app' } })[(D.documentElement.lang || '').slice(0, 2)]
+      || { ep: 'EP', copied: 'Code copied ✓', contEp: 'Continue Episode {n} in the app', cont: 'Continue watching in the app' };
   if (!feed) return;
   function T(n, p) { if (W.SFT) SFT.track(n, Object.assign({ film: B.film, title: B.title, app: B.app }, p || {})) }
   function go(s, instant) { if (s) feed.scrollTo({ top: s.offsetTop, behavior: instant || RM ? 'auto' : 'smooth' }) }
@@ -134,7 +137,7 @@
     var prev = act; act = s; stop(prev);
     D.body.classList.toggle('at-info', s.classList.contains('info'));
     var n = s.dataset.ep;
-    ct.textContent = n && s.classList.contains('fr') ? 'EP ' + n : '';  // không lộ tổng / số tập free (sếp 15/10)
+    ct.textContent = n && s.classList.contains('fr') ? TX.ep + ' ' + n : '';  // không lộ tổng / số tập free (sếp 15/10)
     if (s === lastFr && gest && !done) { done = true; T('ReachedLastFree', { episode: +n }) }  // đã bấm xem và lướt tới tập free cuối (chưa chắc xem hết)
     if (s !== gate) hold = false;  // màn trả phí đầu chỉ đứng yên với nút, không tự nhảy link CPS (test B 19/11: ClickButton chỉ đếm bấm tay)
     if (s.classList.contains('fr') && gest) play(s);
@@ -161,7 +164,7 @@
     var a = e.target.closest && e.target.closest('a.cpy[data-code]');
     if (!a) return;
     e.preventDefault();
-    var c = a.dataset.code, go = function () { a.textContent = 'Code copied ✓'; setTimeout(function () { location.href = a.href }, 350) };
+    var c = a.dataset.code, go = function () { a.textContent = TX.copied; setTimeout(function () { location.href = a.href }, 350) };
     function old() { try { var t = D.createElement('textarea'); t.value = c; t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.opacity = '0'; D.body.appendChild(t); t.select(); D.execCommand('copy'); t.remove() } catch (x) {} go() }
     try { navigator.clipboard.writeText(c).then(go, old) } catch (x) { old() }
   });
@@ -177,7 +180,7 @@
     }
     [].forEach.call(D.querySelectorAll('.cont'), function (x) { x.hidden = true });
     var box = at.querySelector('.cont');
-    box.textContent = (ep ? 'Continue Episode ' + ep : 'Continue watching') + ' in the app';
+    box.textContent = ep ? TX.contEp.replace('{n}', ep) : TX.cont;
     box.hidden = false;
     if (jump) go(at, true);
   }
