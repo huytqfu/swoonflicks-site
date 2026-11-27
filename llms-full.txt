@@ -73,6 +73,8 @@ This is our referral code. If you join with it, ReelShort may give us a better c
 
 URL: https://swoonflicks.com/guides/cancel-reelshort-subscription/
 
+Language: en
+
 Cancel in your phone's store, not inside the app. On iPhone: Settings, your name, Subscriptions. On Android: Google Play, Subscriptions. ReelShort's US App Store listing says the subscription lasts 7 days and renews until you cancel, so do it at least 24 hours before the next renewal.
 
 ### Cancel on iPhone or iPad
@@ -142,6 +144,8 @@ A: Ask Apple through reportaproblem.apple.com or Google Play through its refund 
 ## Viernes en casa: un drama corto y tu bebida favorita
 
 URL: https://swoonflicks.com/es/guides/drama-corto-y-tu-bebida/
+
+Language: es
 
 Elige una historia, sírvete lo que te guste y regálate una hora que sea solo tuya. Mira primero los capítulos gratis. Si al final quedaste enganchada, paga una semana y apaga la renovación esa misma noche.
 
@@ -219,6 +223,8 @@ A: No. Cancela en Configuración del iPhone, en Suscripciones, o en Google Play,
 
 URL: https://swoonflicks.com/guides/dramabox-redeem-code/
 
+Language: en
+
 Search for DramaBox codes and you will find pages full of codes, generators and masked codes. Here is what we could check.
 
 ### What we could verify
@@ -257,6 +263,8 @@ A: No. We do not hand out viewer codes or coins.
 ## ¿Dramas cortos gratis? Lo que sí es gratis y cuándo pagar
 
 URL: https://swoonflicks.com/es/guides/dramas-cortos-gratis/
+
+Language: es
 
 Los primeros capítulos en las apps oficiales sí son gratis, y algunas regalan monedas por entrar cada día. Las páginas que prometen la serie completa gratis suelen traer cortes, anuncios engañosos o algo peor. Si ya te enganchaste, pagar una semana y cancelar la renovación sale más barato que perder noches buscando.
 
@@ -333,7 +341,11 @@ A: No. Cancela en Configuración del iPhone, en Suscripciones, o en Google Play,
 
 URL: https://swoonflicks.com/guides/how-to-join-rs-boost/
 
+Language: en
+
 RS Boost is how ReelShort pays creators who send viewers to its dramas. Here is the sign-up path we used, without the hype. Our invitation code is 8Il7s2qjXNdM.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Before you start
 
@@ -377,6 +389,8 @@ Note: The code above is our referral code. Using it may raise our commission rat
 ## Is ReelShort Worth Paying For? An Honest Take
 
 URL: https://swoonflicks.com/guides/is-reelshort-worth-it/
+
+Language: en
 
 Yes, if one drama has you hooked and you will watch a lot of it in a few days. No, if you only dip in now and then. And a weekly pass is only worth it if you remember to cancel the renewal.
 
@@ -428,20 +442,329 @@ Q: Is ReelShort worth it compared with hunting for free uploads?
 A: If you value your time and your phone's safety, usually yes for a drama you really want to finish. Free re-uploads are often incomplete and some carry malware risk.
 
 
+## ReelShort Einladungscode: Wo du ihn in der App eingibst
+
+URL: https://swoonflicks.com/de/guides/reelshort-einladungscode/
+
+Language: de
+
+Die ReelShort-App hat ein Feld für Einladungscodes für Zuschauer. Hier steht, wo es ist, was ReelShort selbst dazu sagt und wovon du die Finger lassen solltest. Suchst du den RS-Boost-Code für Creator, steht er gleich darunter.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
+
+### Wo du den Einladungscode eingibst
+
+1. Öffne die ReelShort-App und melde dich an.
+2. Tippe auf Me (dein Profil).
+3. Tippe auf Invitation Code (Einladungscode).
+4. Gib den Code ein, den dir jemand geschickt hat, und tippe auf Redeem (einlösen).
+
+Die Schritte folgen der offiziellen englischen Anleitung von ReelShort. Die App kann die Menüs auf Deutsch anzeigen oder verschieben; findest du etwas nicht, sieh in der Anleitung nach.
+
+### Was du bekommst
+
+Laut der Anleitung von ReelShort gibt das Einlösen Bonusmünzen, eine Zahl nennt sie aber nicht. Wer eine feste Münzzahl pro Code verspricht, rät oder lügt.
+
+### Finger weg von Münzgeneratoren
+
+Seiten und Videos, die unbegrenzte Münzen, Hacks oder gemoddete Apps versprechen, sind Betrug. Sie wollen deinen Login, deine Telefonnummer oder eine Installation. ReelShort verteilt keine Münzen über fremde Generatoren.
+
+### Offizielle Wege zu Münzen
+
+ReelShort zeigt in der App eigene Wege, Münzen zu bekommen, etwa den täglichen Check-in und Aufgaben. Die aktuelle Liste steht in der Anleitung von ReelShort.
+
+- [ReelShort: Anleitung zum Einladungscode (Englisch)](https://www.reelshort.com/fandom/reelshort-invitation-code-01-25-1a2b555/)
+- [ReelShort: So bekommst du Gratis-Münzen (Englisch)](https://www.reelshort.com/fandom/how-to-earn-free-coins-on-reelshort-01-25-3faa2218/)
+
+### Creator brauchen einen anderen Code
+
+Willst du mit dem Teilen von ReelShort-Dramen verdienen, brauchst du den RS-Boost-Code für Creator. Er gehört ins Anmeldeformular von RS Boost, nicht in die App.
+
+- [RS Boost Einladungscode: Schritte und FAQ (Englisch)](https://swoonflicks.com/invite/rs-boost/)
+
+### Questions & Answers
+
+Q: Wo gebe ich bei ReelShort einen Einladungscode ein?
+A: In der App: Me, dann Invitation Code, Code eingeben und auf Redeem tippen.
+
+Q: Wie viele Münzen bringt ein ReelShort-Einladungscode?
+A: Die Anleitung von ReelShort nennt keine Zahl, deshalb wir auch nicht.
+
+Q: Gibt es ReelShort-Gutscheincodes, die für alle funktionieren?
+A: Wir haben keinen offiziellen gefunden. Sei vorsichtig bei Seiten mit Codelisten ohne Quelle.
+
+Q: Sind ReelShort-Münzgeneratoren sicher?
+A: Nein. Behandle sie als Betrug und gib nie deinen Login heraus.
+
+Q: Wie lautet der RS-Boost-Einladungscode?
+A: Unserer ist 8Il7s2qjXNdM. Er ist für das RS-Boost-Anmeldeformular für Creator auf cps.reelshort.com, nicht für die ReelShort-App.
+
+Q: Verschenkt Swoonflicks ReelShort-Münzen?
+A: Nein. Wir zeigen kostenlose Teile von Dramen und verlinken für den Rest zu ReelShort.
+
+
+## Código de invitación ReelShort: dónde ponerlo en la app
+
+URL: https://swoonflicks.com/es/guides/codigo-de-invitacion-reelshort/
+
+Language: es
+
+La app de ReelShort tiene una casilla de código de invitación para espectadores. Aquí ves dónde está, qué dice la propia ReelShort y qué evitar. Si buscas el código de creador de RS Boost, está justo abajo.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
+
+### Dónde poner el código de invitación
+
+1. Abre la app de ReelShort e inicia sesión.
+2. Toca Me (tu perfil).
+3. Toca Invitation Code (código de invitación).
+4. Escribe el código que te mandó un amigo y toca Redeem (canjear).
+
+Estos pasos siguen la guía oficial de ReelShort, que está en inglés. La app puede mostrar los menús en español o cambiarlos de sitio; si no lo encuentras, revisa la guía.
+
+### Qué recibes
+
+La guía de ReelShort dice que canjear da monedas de bonificación, pero no dice cuántas. Quien promete un número fijo de monedas por un código está adivinando o mintiendo.
+
+### Evita los generadores de monedas gratis
+
+Las webs y videos que prometen monedas ilimitadas, hacks o apps modificadas son estafas. Quieren tu cuenta, tu número de teléfono o que instales algo. ReelShort no reparte monedas a través de generadores de terceros.
+
+### Formas oficiales de ganar monedas
+
+ReelShort muestra en la app sus propias formas de ganar monedas, como el registro diario y las tareas. Mira la guía de ReelShort para la lista actual.
+
+- [ReelShort: guía del código de invitación (en inglés)](https://www.reelshort.com/fandom/reelshort-invitation-code-01-25-1a2b555/)
+- [ReelShort: cómo ganar monedas gratis (en inglés)](https://www.reelshort.com/fandom/how-to-earn-free-coins-on-reelshort-01-25-3faa2218/)
+
+### Creadores: es otro código
+
+Si quieres ganar compartiendo dramas de ReelShort, necesitas el código de creador de RS Boost, que va en el formulario de registro de RS Boost, no en la app.
+
+- [Código de invitación RS Boost: pasos y preguntas](https://swoonflicks.com/es/invite/rs-boost/)
+
+### Questions & Answers
+
+Q: ¿Dónde pongo el código de invitación en ReelShort?
+A: En la app: Me, luego Invitation Code, escribe el código y toca Redeem.
+
+Q: ¿Cuántas monedas da un código de invitación de ReelShort?
+A: La guía de ReelShort no dice la cantidad, así que nosotros tampoco.
+
+Q: ¿Hay códigos promocionales de ReelShort que sirvan para todos?
+A: No hemos encontrado ninguno oficial. Desconfía de webs con listas de códigos sin fuente.
+
+Q: ¿Son seguros los generadores de monedas de ReelShort?
+A: No. Trátalos como estafa y nunca des tu cuenta.
+
+Q: ¿Cuál es el código de invitación de RS Boost?
+A: El nuestro es 8Il7s2qjXNdM. Es para el formulario de registro de creadores de RS Boost en cps.reelshort.com, no para la app de ReelShort.
+
+Q: ¿Swoonflicks regala monedas de ReelShort?
+A: No. Mostramos partes gratis de los dramas y enlazamos a ReelShort para el resto.
+
+
+## Código de convite ReelShort: onde colocar no app
+
+URL: https://swoonflicks.com/pt/guides/codigo-de-convite-reelshort/
+
+Language: pt
+
+O app da ReelShort tem um campo de código de convite para espectadores. Veja onde fica, o que a própria ReelShort diz sobre ele e o que evitar. Se você veio atrás do código de criador do RS Boost, ele está logo abaixo.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
+
+### Onde colocar o código de convite
+
+1. Abra o app da ReelShort e entre na sua conta.
+2. Toque em Me (seu perfil).
+3. Toque em Invitation Code (código de convite).
+4. Digite o código que um amigo enviou e toque em Redeem (resgatar).
+
+Esses passos seguem o guia oficial da ReelShort, que está em inglês. O app pode mostrar os menus em português ou mudar de lugar; se não achar, confira o guia.
+
+### O que você ganha
+
+O guia da ReelShort diz que o resgate dá moedas bônus, mas não informa quantas. Quem promete um número fixo de moedas por código está chutando ou mentindo.
+
+### Fuja dos geradores de moedas grátis
+
+Sites e vídeos que prometem moedas ilimitadas, hack ou app modificado são golpe. Eles querem seu login, seu número de telefone ou que você instale algo. A ReelShort não distribui moedas por geradores de terceiros.
+
+### Jeitos oficiais de ganhar moedas
+
+A ReelShort lista no próprio app as formas de ganhar moedas, como check-in diário e tarefas. Veja o guia da ReelShort para a lista atual.
+
+- [ReelShort: guia do código de convite (em inglês)](https://www.reelshort.com/fandom/reelshort-invitation-code-01-25-1a2b555/)
+- [ReelShort: como ganhar moedas grátis (em inglês)](https://www.reelshort.com/fandom/how-to-earn-free-coins-on-reelshort-01-25-3faa2218/)
+
+### Criadores: é outro código
+
+Se você quer ganhar divulgando dramas da ReelShort, precisa do código de criador do RS Boost, que vai no formulário de cadastro do RS Boost, não no app.
+
+- [Código de convite RS Boost: passo a passo e perguntas](https://swoonflicks.com/pt/invite/rs-boost/)
+
+### Questions & Answers
+
+Q: Onde coloco o código de convite na ReelShort?
+A: No app: Me, depois Invitation Code, digite o código e toque em Redeem.
+
+Q: Quantas moedas o código de convite da ReelShort dá?
+A: O guia da ReelShort não informa a quantidade, então nós também não.
+
+Q: Existe código promocional da ReelShort que funciona para todo mundo?
+A: Não encontramos nenhum oficial. Desconfie de sites com listas de códigos sem fonte.
+
+Q: Gerador de moedas da ReelShort é seguro?
+A: Não. Trate como golpe e nunca passe seu login.
+
+Q: Qual é o código de convite do RS Boost?
+A: O nosso é 8Il7s2qjXNdM. É para o formulário de cadastro de criadores do RS Boost em cps.reelshort.com, não para o app da ReelShort.
+
+Q: A Swoonflicks dá moedas da ReelShort?
+A: Não. Mostramos partes grátis dos dramas e mandamos para a ReelShort para o resto.
+
+
+## Код приглашения ReelShort: куда вводить в приложении
+
+URL: https://swoonflicks.com/ru/guides/kod-priglasheniya-reelshort/
+
+Language: ru
+
+В приложении ReelShort есть поле для кода приглашения для зрителей. Здесь написано, где оно, что говорит о нём сама ReelShort и чего стоит избегать. Если вы искали код автора для RS Boost, он сразу ниже.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
+
+### Куда вводить код приглашения
+
+1. Откройте приложение ReelShort и войдите в аккаунт.
+2. Нажмите Me (профиль).
+3. Нажмите Invitation Code (код приглашения).
+4. Введите код, который прислал друг, и нажмите Redeem (активировать).
+
+Шаги взяты из официальной инструкции ReelShort на английском. В приложении пункты меню могут называться по-русски или находиться в другом месте; если не нашли, сверьтесь с инструкцией.
+
+### Что вы получаете
+
+В инструкции ReelShort сказано, что код даёт бонусные монеты, но сколько, не указано. Кто обещает точное число монет за код, гадает или обманывает.
+
+### Не пользуйтесь генераторами монет
+
+Сайты и видео, которые обещают бесконечные монеты, взлом или модифицированное приложение, это мошенничество. Им нужен ваш логин, номер телефона или установка их программы. ReelShort не раздаёт монеты через сторонние генераторы.
+
+### Официальные способы получить монеты
+
+ReelShort сама перечисляет в приложении способы получить монеты, например ежедневную отметку и задания. Актуальный список есть в инструкции ReelShort.
+
+- [ReelShort: инструкция по коду приглашения (на английском)](https://www.reelshort.com/fandom/reelshort-invitation-code-01-25-1a2b555/)
+- [ReelShort: как получить бесплатные монеты (на английском)](https://www.reelshort.com/fandom/how-to-earn-free-coins-on-reelshort-01-25-3faa2218/)
+
+### Авторам нужен другой код
+
+Если вы хотите зарабатывать, делясь сериалами ReelShort, нужен код автора RS Boost. Он вводится в форме регистрации RS Boost, а не в приложении.
+
+- [Код приглашения RS Boost: шаги и вопросы](https://swoonflicks.com/ru/invite/rs-boost/)
+
+### Questions & Answers
+
+Q: Куда вводить код приглашения в ReelShort?
+A: В приложении: Me, затем Invitation Code, введите код и нажмите Redeem.
+
+Q: Сколько монет даёт код приглашения ReelShort?
+A: В инструкции ReelShort количество не указано, поэтому мы его тоже не называем.
+
+Q: Есть ли промокоды ReelShort, которые работают у всех?
+A: Официальных мы не нашли. Не доверяйте сайтам со списками кодов без источника.
+
+Q: Безопасны ли генераторы монет ReelShort?
+A: Нет. Считайте их мошенничеством и никогда не отдавайте свой логин.
+
+Q: Какой код приглашения у RS Boost?
+A: Наш код 8Il7s2qjXNdM. Он для формы регистрации авторов RS Boost на cps.reelshort.com, а не для приложения ReelShort.
+
+Q: Swoonflicks раздаёт монеты ReelShort?
+A: Нет. Мы показываем бесплатные части сериалов и ведём в ReelShort за продолжением.
+
+
+## ReelShort 邀请码：在 App 里哪里填写
+
+URL: https://swoonflicks.com/zh/guides/reelshort-yaoqingma/
+
+Language: zh
+
+ReelShort App 里有一个给观众用的邀请码入口。下面说明它在哪里、ReelShort 官方怎么说，以及要避开什么。如果你要找的是 RS Boost 创作者邀请码，就在下方。
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
+
+### 邀请码在哪里填写
+
+1. 打开 ReelShort App 并登录。
+2. 点击 Me（个人主页）。
+3. 点击 Invitation Code（邀请码）。
+4. 输入朋友发给你的邀请码，点击 Redeem（兑换）。
+
+以上步骤来自 ReelShort 官方英文指南。App 里的菜单可能显示为中文，位置也可能调整；找不到时请对照官方指南。
+
+### 能得到什么
+
+ReelShort 官方指南说兑换后可获得奖励金币，但没有写具体数量。声称一个邀请码能换固定数量金币的，不是瞎猜就是骗人。
+
+### 远离免费金币生成器
+
+承诺无限金币、破解版或修改版 App 的网站和视频都是骗局。它们想要你的账号、手机号，或者让你安装东西。ReelShort 不会通过第三方生成器发放金币。
+
+### 官方获取金币的方式
+
+ReelShort 在 App 里列出了官方获取金币的方式，例如每日签到和任务。最新列表请看 ReelShort 官方指南。
+
+- [ReelShort：邀请码官方指南（英文）](https://www.reelshort.com/fandom/reelshort-invitation-code-01-25-1a2b555/)
+- [ReelShort：如何免费获得金币（英文）](https://www.reelshort.com/fandom/how-to-earn-free-coins-on-reelshort-01-25-3faa2218/)
+
+### 创作者用的是另一个码
+
+如果你想通过分享 ReelShort 短剧赚钱，需要的是 RS Boost 创作者邀请码，填在 RS Boost 注册表里，不是填在 App 里。
+
+- [RS Boost 邀请码：注册步骤和常见问题](https://swoonflicks.com/zh/invite/rs-boost/)
+
+### Questions & Answers
+
+Q: ReelShort 的邀请码在哪里填？
+A: 在 App 里：Me，然后 Invitation Code，输入邀请码后点 Redeem。
+
+Q: ReelShort 邀请码能换多少金币？
+A: ReelShort 官方指南没有写数量，所以我们也不写。
+
+Q: 有没有人人都能用的 ReelShort 兑换码？
+A: 我们没有找到官方的。对列出一堆邀请码却没有来源的网站要小心。
+
+Q: ReelShort 金币生成器安全吗？
+A: 不安全。当作骗局对待，绝不要交出你的账号。
+
+Q: RS Boost 邀请码是多少？
+A: 我们的是 8Il7s2qjXNdM。它用于 cps.reelshort.com 上的 RS Boost 创作者注册表，不是用于 ReelShort App。
+
+Q: Swoonflicks 送 ReelShort 金币吗？
+A: 不送。我们分享短剧的免费片段，其余剧集请到 ReelShort 观看。
+
+
 ## ReelShort Invitation Code: Where to Enter It
 
 URL: https://swoonflicks.com/guides/reelshort-invitation-code/
 
-ReelShort has an invitation code box for viewers. Here is where it is, what ReelShort itself says about it, and what to avoid.
+Language: en
+
+ReelShort has an invitation code box for viewers. Here is where it is, what ReelShort itself says about it, and what to avoid. If you came for the RS Boost creator code, it is right below.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Where to enter an invitation code
-
-These steps follow ReelShort's own guide. The app can change, so check that guide if a menu has moved.
 
 1. Open the ReelShort app and log in.
 2. Tap Me (your profile).
 3. Tap Invitation Code.
 4. Enter the code a friend sent you and tap Redeem.
+
+These steps follow ReelShort's own guide. The app can change, so check that guide if a menu has moved.
 
 ### What you get
 
@@ -462,7 +785,7 @@ ReelShort lists its own ways to earn coins in the app, such as daily check-ins a
 
 If you want to earn by sharing ReelShort dramas, you need the RS Boost creator code, which goes in the RS Boost sign-up form, not in the app.
 
-- [RS Boost invite code for creators](https://swoonflicks.com/invite/rs-boost/)
+- [RS Boost invite code: steps and FAQ](https://swoonflicks.com/invite/rs-boost/)
 
 ### Questions & Answers
 
@@ -478,6 +801,9 @@ A: We have not found any official one. Be wary of sites listing many codes with 
 Q: Are ReelShort coin generators safe?
 A: No. Treat them as scams and never give them your login.
 
+Q: What is the RS Boost invitation code?
+A: Ours is 8Il7s2qjXNdM. It is for the RS Boost creator sign-up form at cps.reelshort.com, not for the ReelShort app.
+
 Q: Does Swoonflicks give ReelShort coins?
 A: No. We share free parts of dramas and link to ReelShort for the rest.
 
@@ -485,6 +811,8 @@ A: No. We share free parts of dramas and link to ReelShort for the rest.
 ## ReelShort vs DramaBox vs NetShort: Which Pass to Buy
 
 URL: https://swoonflicks.com/guides/reelshort-vs-dramabox-vs-netshort/
+
+Language: en
 
 All four work the same way: free first episodes, then coins or a weekly pass. Prices on the US App Store sit in the same range. The real difference is the stories, because each app has its own. Buy where the drama you are hooked on lives, buy one week, and cancel the renewal.
 
@@ -554,7 +882,11 @@ A: Weekly passes and subscriptions renew until you cancel. ReelShort's App Store
 
 URL: https://swoonflicks.com/es/invite/rs-boost/
 
+Language: es
+
 ¿Te estás registrando en RS Boost, el programa de afiliados de ReelShort para creadores? El formulario tiene una casilla para el código de invitación. Nuestro código es 8Il7s2qjXNdM: cópialo abajo y pégalo en esa casilla. Si prefieres, también te lo enviamos por correo con el enlace de registro y una lista breve de pasos.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Dónde pegar el código
 
@@ -604,7 +936,11 @@ Note: Este es nuestro código de referido. Si te registras con él, ReelShort pu
 
 URL: https://swoonflicks.com/pt/invite/rs-boost/
 
+Language: pt
+
 Vai se cadastrar no RS Boost, o programa de afiliados da ReelShort para criadores? O formulário tem um campo para o código de convite. Nosso código é 8Il7s2qjXNdM: copie abaixo e cole nesse campo. Se preferir, também enviamos por e-mail com o link de cadastro e um checklist curto.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Onde colar o código
 
@@ -654,7 +990,11 @@ Note: Este é o nosso código de indicação. Se você se cadastrar com ele, a R
 
 URL: https://swoonflicks.com/ru/invite/rs-boost/
 
+Language: ru
+
 Регистрируетесь в RS Boost, партнёрской программе ReelShort для авторов? В форме регистрации есть поле для кода приглашения. Наш код 8Il7s2qjXNdM: скопируйте его и вставьте в это поле. Если удобнее, пришлём код на почту вместе со ссылкой на регистрацию и коротким чек-листом.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Куда вставить код
 
@@ -704,7 +1044,11 @@ Note: Это наш реферальный код. Если вы зарегис�
 
 URL: https://swoonflicks.com/tr/invite/rs-boost/
 
+Language: tr
+
 ReelShort'un içerik üreticileri için ortaklık programı RS Boost'a mı kaydoluyorsun? Kayıt formunda davet kodu alanı var. Bizim kodumuz 8Il7s2qjXNdM: kopyala ve o alana yapıştır. İstersen kodu kayıt linki ve kısa bir kontrol listesiyle e-postayla da gönderiyoruz.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Kod nereye yapıştırılır
 
@@ -757,7 +1101,11 @@ Note: Bu bizim tavsiye kodumuz. Bu kodla kaydolursan ReelShort bize daha iyi bir
 
 URL: https://swoonflicks.com/zh/invite/rs-boost/
 
+Language: zh
+
 准备注册 ReelShort 的创作者推广计划 RS Boost？注册表单里有一个邀请码栏。我们的邀请码是 8Il7s2qjXNdM，复制后粘贴到那一栏即可。也可以在本页填写邮箱，我们会把邀请码、注册链接和简短检查清单一起发给你。
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### 邀请码填在哪里
 
@@ -807,7 +1155,11 @@ Note: 这是我们的推荐码。你用它注册，ReelShort 可能会给我们�
 
 URL: https://swoonflicks.com/invite/rs-boost/
 
+Language: en
+
 Signing up for RS Boost, ReelShort's affiliate program for creators? The sign-up form has an invitation code box. Our code is 8Il7s2qjXNdM: copy it below and paste it in that box. If you prefer, we can also email it to you with the sign-up link and a short checklist.
+
+RS Boost invitation code (creator sign-up form, not the app): 8Il7s2qjXNdM
 
 ### Where to paste the code
 
@@ -864,6 +1216,8 @@ Note: This is our referral code. If you join with it, ReelShort may give us a be
 
 URL: https://swoonflicks.com/guides/rs-boost-rules/
 
+Language: en
+
 Most lost commissions come from breaking a rule nobody read. This is a plain summary of the RS Boost terms, with section numbers so you can check the original.
 
 ### Where you can post
@@ -911,6 +1265,8 @@ A: No. Read the full terms through the links below before you rely on any point.
 ## Friday Night In: A Short Drama and a Drink
 
 URL: https://swoonflicks.com/guides/short-drama-and-a-drink/
+
+Language: en
 
 Pick one story, pour whatever you like, and take an hour that belongs to nobody else. Watch the free episodes first. If you are hooked by the end, pay once for the week and switch off renewal the same night.
 
@@ -988,6 +1344,8 @@ A: No. Cancel in your iPhone Settings under Subscriptions, or in Google Play und
 
 URL: https://swoonflicks.com/guides/stop-hunting-free-episodes/
 
+Language: en
+
 Short answer: the free episodes inside the official apps are real. Pages promising the whole drama free usually are not. If one drama has you hooked, paying once for a weekend often costs less than the evenings you spend hunting for a free copy.
 
 ### What is actually free
@@ -1039,6 +1397,8 @@ A: No. We share the start of dramas we like and link to the official app for the
 
 URL: https://swoonflicks.com/guides/weekend-short-drama-binge/
 
+Language: en
+
 Pick one drama on Friday and start watching. Pay once on Saturday only if you want the ending, turn off renewal right away, and finish on Sunday. No hunting, no pop-ups, no surprise charge next week.
 
 ### Friday night: pick one story
@@ -1082,6 +1442,8 @@ A: Swoonflicks pages work in any browser. The full series continues in the offic
 ## Short Drama Weekly Pass vs Coins: Which to Buy
 
 URL: https://swoonflicks.com/guides/weekly-pass-vs-coins/
+
+Language: en
 
 Coins suit one drama you want to finish. A weekly pass suits a binge across several dramas in a few days. A pass renews automatically, so cancel the renewal as soon as you buy.
 
